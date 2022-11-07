@@ -1,0 +1,250 @@
+body {
+	color:#000000;
+	background-color:#271222;
+	margin:0;
+}
+
+#titlebar {
+	margin-left:auto;
+	margin-right:auto;
+	text-align:center;
+	}
+
+
+.cardList{
+	position: relative;
+	margin-left: 10vw;
+	width: 80vw;
+	height: 100vh;
+	margin-top: 3vh;
+	
+	
+}
+
+.card {
+	aspect-ratio: 5 / 7;
+	background-color: #16836b;
+	width: 15vw;
+	min-width: 400px;
+	border-radius: 1vw;
+	
+	position: relative;
+	float: left;
+	margin-left: 4vw;
+	margin-bottom: 3vh;
+
+	transition: transform 400ms cubic-bezier(.05,.43,.25,.95);
+
+	align-content: center;
+}
+.cardImg{
+	align-self: auto;
+	margin-top: 10%;
+	margin-left: 10%;
+	width:80%;
+	height:50%;
+	border-radius: 1vw;
+}
+
+#preSelectedCard{
+	position: absolute;
+	transform: translateX(25vw)  translateY(-50%) rotate(0deg);	
+	transition: none;
+}
+
+#selectedCard {
+	position: absolute;
+	background-color: #16836b;
+	margin-left: 25vw;
+	align-self: center;
+	width: 30vw;
+	min-width: 700px;
+	z-index: 10;
+	transform: translateX(0%) translateY(0%) rotate(0deg);
+}
+
+#selectedCardMobile{
+	position: absolute;
+	background-color: #16836b;
+	margin-left: 0;
+	margin-top: 5vh;
+	align-self: center;
+	width: 80vw;
+	min-width: 650px;
+	z-index: 10;
+	transform: translateX(0%) translateY(0%) rotate(0deg);
+}
+
+
+
+.card:nth-child(4n+1){
+	transform: translateX(-10%)  translateY(2%) rotate(-2deg);	
+}
+
+ 
+.card:nth-child(4n+2){
+	transform: translateX(-5%)  translateY(0%) rotate(-1deg);	
+}
+
+.card:nth-child(4n+3){
+	transform: translateX(6%)  translateY(0%) rotate(1deg);	
+}
+
+
+.card:nth-child(4n){
+	transform: translateX(10%) translateY(2%) rotate(2deg);
+}
+
+.card:hover{
+	outline-style: solid;
+	outline-color: #f8f8f8;
+	outline-width: 1vw;
+	transform: translateX(0%) translateY(0%) rotate(0deg);
+}
+
+.titles{
+	font-family: consolas;
+	color: white;
+}
+
+
+.buttonContainer{
+	position: absolute;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	min-height: 100vh;
+}
+
+
+
+.hiddenButton{
+	display: none;
+	position: absolute;
+	transform: translateX(0%)  translateY(0%) rotate(0deg);	
+}
+
+.gettingVisibleButton{
+	border: none;
+	z-index: 10;
+	display: block;
+	position: absolute;
+	background: rgb(35,85,74);
+	background: linear-gradient(90deg, rgba(35,85,74,1) 0%, rgba(39,18,34,1) 80%); 
+	font-family: consolas;
+	font-size: 5.5vMin;;
+	height: 8vh;
+	width: 12vw;
+	padding-left: 1vw;
+	padding-right: 1vw;
+	color:white;
+	border-radius: 1vw;
+	transform: translateX(40vw)  translateY(-50%) rotate(0deg);	
+	transition: transform 400ms cubic-bezier(.05,.43,.25,.95);
+}
+
+.wasVisibleButton{
+	border: none;
+	z-index: 10;
+	display: block;
+	position: absolute;
+	background: rgb(35,85,74);
+	background: linear-gradient(90deg, rgba(35,85,74,1) 0%, rgba(39,18,34,1) 80%); 
+	font-family: consolas;
+	font-size: 5.5vMin;;
+	height: 8vh;
+	width: 12vw;
+	padding-left: 1vw;
+	padding-right: 1vw;
+	color:white;
+	border-radius: 1vw;
+	transform: translateX(40vw)  translateY(-18vh) rotate(0deg);	
+	transition: transform 400ms cubic-bezier(.05,.43,.25,.95);
+}
+
+.visibleButton{
+	border: none;
+	z-index: 10;
+	display: block;
+	position: absolute;
+	background: rgb(35,85,74);
+	background: linear-gradient(90deg, rgba(35,85,74,1) 0%, rgba(39,18,34,1) 80%); 
+	font-family: consolas;
+	font-size: 5.5vMin;
+	height: 8vh;
+	width: 12vw;
+	padding-left: 1vw;
+	padding-right: 1vw;
+	color:white;
+	transition: transform 400ms cubic-bezier(.05,.43,.25,.95);
+	border-radius: 1vw;
+}
+
+
+.visibleButton:nth-child(1){
+	transform: translateX(40vw)  translateY(15vh) rotate(10deg);	
+}
+
+ 
+.visibleButton:nth-child(2){
+	transform: translateX(40vw)  translateY(25vh) rotate(10deg);	
+}
+
+.visibleButton:nth-child(3){
+	transform: translateX(40vw)  translateY(35vh) rotate(10deg);	
+}
+
+
+.visibleButton:nth-child(4){
+	transform: translateX(40vw) translateY(45vh) rotate(10deg);
+}
+
+.revealButtonNoContent{
+	position: relative;
+	height: 60vh;
+	width: 90vw;
+}
+
+.revealButtonBig{
+	border-radius: 1vw;
+	border: none;
+	min-width: 200px;
+	position: relative;
+	background-color: #23554a;
+	font-family: consolas;
+	font-size: 5.5vMin;;
+	color:white;
+	padding-left: 1vw;
+	padding-right: 1vw;
+	height: 8vh;
+	width: 12vw;
+	
+	font-display: none;
+	transition: transform 400ms cubic-bezier(.05,.43,.25,.95);
+	transform: translateX(40vw) translateY(0.5vw) rotate(0);
+}
+
+.revealButtonSmall{
+	border-radius: 1vw;
+	border: none;
+	min-width: 200px;
+	position: absolute;
+	height: 8vh;
+	width: 12vw;
+	z-index: 10;
+
+	background-color: #23554a;
+	font-family: consolas;
+	font-size: 5.5vMin;;
+	color:white;
+	padding-left: 1vw;
+	padding-right: 1vw;
+	transform: translateX(40vw) translateY(45vh) rotate(10deg);
+	transition: transform 400ms cubic-bezier(.05,.43,.25,.95);
+}
+
+
+#hidden{
+	display: none;
+}
