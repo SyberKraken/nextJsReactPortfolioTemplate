@@ -158,9 +158,26 @@ body {
 	padding-left: 1vw;
 	padding-right: 1vw;
 	color:white;
-	border-radius: 1vw;
-	transform: translateX(40vw)  translateY(-18vh) rotate(0deg);	
+	border-radius: 1vw;	
 	transition: transform 400ms cubic-bezier(.05,.43,.25,.95);
+}
+
+.wasVisibleButton:nth-child(1){
+	transform: translateX(40vw)  translateY(-45vh) rotate(10deg);	
+}
+
+ 
+.wasVisibleButton:nth-child(2){
+	transform: translateX(40vw)  translateY(-35vh) rotate(10deg);	
+}
+
+.wasVisibleButton:nth-child(3){
+	transform: translateX(40vw)  translateY(-25vh) rotate(10deg);	
+}
+
+
+.wasVisibleButton:nth-child(4){
+	transform: translateX(40vw) translateY(-15vh) rotate(10deg);
 }
 
 .visibleButton{
