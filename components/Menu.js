@@ -1,6 +1,6 @@
 import { useState } from "react";
 import Cards from "./Cards";
-
+import Fidget from "./Fidget"
 
 let buttonsAreVisible = false;
 let hasOpenContent = false;
@@ -56,10 +56,11 @@ function Menu(props){
                 <Cards></Cards>
         </div>
         <div id={meClass} >
-                <p>weeeee</p>
+            <p>weeeeeee</p>
         </div>
         <div id={fidgetClass} >
-            <p>weeeeeee</p>
+            <Fidget></Fidget>
+           
         </div>
         </> 
     )

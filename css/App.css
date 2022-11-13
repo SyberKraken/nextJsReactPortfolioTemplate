@@ -25,18 +25,33 @@ body {
 	aspect-ratio: 5 / 7;
 	background-color: #16836b;
 	width: 15vw;
-	min-width: 400px;
+	min-width: 100px;
 	border-radius: 1vw;
-	
+
 	position: relative;
 	float: left;
 	margin-left: 4vw;
 	margin-bottom: 3vh;
-
 	transition: transform 400ms cubic-bezier(.05,.43,.25,.95);
-
 	align-content: center;
 }
+
+.mobileCard {
+	aspect-ratio: 5 / 7;
+	background-color: #16836b;
+	width: 30vw;
+	min-width: 100px;
+	border-radius: 1vw;
+
+	position: relative;
+	float: left;
+	margin-left: 4vw;
+	margin-bottom: 3vh;
+	transition: transform 400ms cubic-bezier(.05,.43,.25,.95);
+	align-content: center;
+}
+
+
 .cardImg{
 	align-self: auto;
 	margin-top: 10%;
@@ -48,8 +63,9 @@ body {
 
 #preSelectedCard{
 	position: absolute;
-	transform: translateX(25vw)  translateY(-50%) rotate(0deg);	
+	transform: translateX(0)  translateY(-50vw) rotate(0deg);	
 	transition: none;
+	
 }
 
 #selectedCard {
@@ -58,7 +74,6 @@ body {
 	margin-left: 25vw;
 	align-self: center;
 	width: 30vw;
-	min-width: 700px;
 	z-index: 10;
 	transform: translateX(0%) translateY(0%) rotate(0deg);
 }
@@ -66,39 +81,20 @@ body {
 #selectedCardMobile{
 	position: absolute;
 	background-color: #16836b;
-	margin-left: 0;
-	margin-top: 5vh;
+	margin-left: 10vw;
+	margin-top: 0vh;
 	align-self: center;
-	width: 80vw;
-	min-width: 650px;
+	width: 60vw;
 	z-index: 10;
 	transform: translateX(0%) translateY(0%) rotate(0deg);
 }
 
 
-
-.card:nth-child(4n+1){
-	transform: translateX(-10%)  translateY(2%) rotate(-2deg);	
-}
-
- 
-.card:nth-child(4n+2){
-	transform: translateX(-5%)  translateY(0%) rotate(-1deg);	
-}
-
-.card:nth-child(4n+3){
-	transform: translateX(6%)  translateY(0%) rotate(1deg);	
-}
-
-
-.card:nth-child(4n){
-	transform: translateX(10%) translateY(2%) rotate(2deg);
-}
-
 .card:hover{
 	outline-style: solid;
 	outline-color: #f8f8f8;
 	outline-width: 1vw;
+	
 	transform: translateX(0%) translateY(0%) rotate(0deg);
 }
 
@@ -140,7 +136,7 @@ body {
 	padding-right: 1vw;
 	color:white;
 	border-radius: 1vw;
-	transform: translateX(40vw)  translateY(-50%) rotate(0deg);	
+	transform: translateX(44vw)  translateY(-50%) rotate(0deg);	
 	transition: transform 400ms cubic-bezier(.05,.43,.25,.95);
 }
 
@@ -161,23 +157,22 @@ body {
 	border-radius: 1vw;	
 	transition: transform 400ms cubic-bezier(.05,.43,.25,.95);
 }
-
 .wasVisibleButton:nth-child(1){
-	transform: translateX(40vw)  translateY(-45vh) rotate(10deg);	
+	transform: translateX(44vw)  translateY(-45vh) rotate(10deg);	
 }
 
  
 .wasVisibleButton:nth-child(2){
-	transform: translateX(40vw)  translateY(-35vh) rotate(10deg);	
+	transform: translateX(44vw)  translateY(-35vh) rotate(10deg);	
 }
 
 .wasVisibleButton:nth-child(3){
-	transform: translateX(40vw)  translateY(-25vh) rotate(10deg);	
+	transform: translateX(44vw)  translateY(-25vh) rotate(10deg);	
 }
 
 
 .wasVisibleButton:nth-child(4){
-	transform: translateX(40vw) translateY(-15vh) rotate(10deg);
+	transform: translateX(44vw) translateY(-15vh) rotate(10deg);
 }
 
 .visibleButton{
@@ -199,22 +194,23 @@ body {
 }
 
 
+
 .visibleButton:nth-child(1){
-	transform: translateX(40vw)  translateY(15vh) rotate(10deg);	
+	transform: translateX(44vw)  translateY(15vh) rotate(10deg);	
 }
 
  
 .visibleButton:nth-child(2){
-	transform: translateX(40vw)  translateY(25vh) rotate(10deg);	
+	transform: translateX(44vw)  translateY(25vh) rotate(10deg);	
 }
 
 .visibleButton:nth-child(3){
-	transform: translateX(40vw)  translateY(35vh) rotate(10deg);	
+	transform: translateX(44vw)  translateY(35vh) rotate(10deg);	
 }
 
 
 .visibleButton:nth-child(4){
-	transform: translateX(40vw) translateY(45vh) rotate(10deg);
+	transform: translateX(44vw) translateY(45vh) rotate(10deg);
 }
 
 .revealButtonNoContent{
@@ -226,7 +222,6 @@ body {
 .revealButtonBig{
 	border-radius: 1vw;
 	border: none;
-	min-width: 200px;
 	position: relative;
 	background-color: #23554a;
 	font-family: consolas;
@@ -235,17 +230,15 @@ body {
 	padding-left: 1vw;
 	padding-right: 1vw;
 	height: 8vh;
-	width: 12vw;
-	
+	width: 12vw;	
 	font-display: none;
 	transition: transform 400ms cubic-bezier(.05,.43,.25,.95);
-	transform: translateX(40vw) translateY(0.5vw) rotate(0);
+	transform: translateX(44vw) translateY(0.5vw) rotate(0);
 }
 
 .revealButtonSmall{
 	border-radius: 1vw;
 	border: none;
-	min-width: 200px;
 	position: absolute;
 	height: 8vh;
 	width: 12vw;
@@ -257,10 +250,48 @@ body {
 	color:white;
 	padding-left: 1vw;
 	padding-right: 1vw;
-	transform: translateX(40vw) translateY(45vh) rotate(10deg);
+	transform: translateX(44vw) translateY(46vh) rotate(10deg);
 	transition: transform 400ms cubic-bezier(.05,.43,.25,.95);
 }
 
+.fidgetBox{
+	background-color: rgb(30, 177, 121);
+	width: 100%;
+	height: 15%;
+	position: relative;
+	display: block;
+
+	transform: translateX(0) translateY(0) rotate(15deg);
+
+	border-radius: 200px;
+    z-index: 3;
+}
+
+.fidgetBoxInverse{
+	background-color: rgb(30, 177, 121);
+	width: 100%;
+	height: 15%;
+	position: relative;
+	display: block;
+	transform: translateX(0) translateY(0) rotate(-15deg);
+	border-radius: 200px;
+
+}
+
+.slantedboxHolder{
+	width: 100%;
+	height: 25%;
+	
+	position: relative;
+}
+
+.fidgetWrapper{
+	margin-top: 7vh;
+	width :100vw;
+	height: 100vw;
+	position:absolute;
+	display: flexbox;
+}
 
 #hidden{
 	display: none;

@@ -10,9 +10,15 @@ function Card(props){
     const [id, setId] = useState("")
     const [index, setIndex] = useState(props.index)
     const [isOnMobile, setOnMobile] = useState(false)
+    const [cardClass, setCardClass] = useState("card")
 
-    useEffect(() => setOnMobile(window.innerHeight > window.innerWidth), []) 
-
+    useEffect(() => {
+        setOnMobile(window.innerHeight > window.innerWidth)
+        if(window.innerHeight > window.innerWidth){
+            setCardClass("mobileCard")
+        }
+    }, [])
+    
     function RemoveMyFocus(){
         setIsFocused(false)
         setId("")
@@ -55,8 +61,8 @@ function Card(props){
     
 
     let returnItem = 
-        <div id={id} class="card" index={index} key={"CARD:"+index} onClick={() =>{focus()} }>
-            <img class ="cardImg"src={props.img} alt="ImageOnCard"></img>
+        <div id={id} class={cardClass} index={index} key={"CARD:"+index} onClick={() =>{focus()} }>
+            <img class ="cardImg" src={props.img} alt="ImageOnCard"></img>
 
         </div>
 
