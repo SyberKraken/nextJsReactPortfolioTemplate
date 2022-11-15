@@ -1,3 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 body {
 	color:#000000;
 	background-color:#271222;
@@ -220,18 +224,7 @@ body {
 }
 
 .revealButtonBig{
-	border-radius: 1vw;
-	border: none;
-	position: relative;
-	background-color: #23554a;
-	font-family: consolas;
-	font-size: 5.5vMin;;
-	color:white;
-	padding-left: 1vw;
-	padding-right: 1vw;
-	height: 8vh;
-	width: 12vw;	
-	font-display: none;
+	
 	transition: transform 400ms cubic-bezier(.05,.43,.25,.95);
 	transform: translateX(44vw) translateY(0.5vw) rotate(0);
 }

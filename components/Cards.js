@@ -36,7 +36,7 @@ function Cards(props){
 
    
     return(     
-        <div class="cardList">
+        <div className={"cardList" + props.hiddenClass}>
            {imgList.map((item, i) => <Card index={i} img={item}></Card>)}
         </div>
     )
